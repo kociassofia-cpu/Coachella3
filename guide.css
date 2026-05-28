@@ -1,0 +1,643 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fef9f0;
+    font-family: 'Inter', sans-serif;
+    color: #1e1a17;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.header {
+    background: #1e1a17;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #fef3e4;
+}
+
+.logo-accent {
+    color: #e68a2e;
+    margin-left: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #e2cfbc;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 8px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #e68a2e;
+}
+
+.page-hero {
+    padding: 70px 0 50px;
+    background: #fff4ec;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #2d2a26, #b45f2b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #6b5745;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #e68a2e;
+    border-radius: 4px;
+}
+
+section {
+    padding: 80px 0;
+    border-bottom: 1px solid #f0e3d4;
+}
+
+.guide-intro {
+    padding-top: 40px;
+}
+
+.guide-intro-block {
+    text-align: center;
+    background: linear-gradient(135deg, #fff6ed 0%, #ffe8d8 100%);
+    border-radius: 64px;
+    padding: 60px 40px;
+}
+
+.guide-intro-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.guide-intro-block h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.guide-intro-block p {
+    font-size: 1.2rem;
+    color: #5a4a3a;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.tickets {
+    background: #fffaf4;
+}
+
+.tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.ticket-card {
+    background: white;
+    border-radius: 32px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid #f0e3d4;
+}
+
+.ticket-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+}
+
+.ticket-type {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #e68a2e;
+    margin-bottom: 12px;
+}
+
+.ticket-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #2d2a26;
+}
+
+.ticket-card p {
+    color: #6b5745;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.ticket-note {
+    background: #fff0e6;
+    border-radius: 60px;
+    padding: 16px 24px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.packing-guide {
+    background: #fff;
+}
+
+.packing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.packing-category {
+    background: #fefaf5;
+    border-radius: 28px;
+    padding: 28px;
+    border: 1px solid #f0e3d4;
+    transition: transform 0.2s;
+}
+
+.packing-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -10px rgba(0,0,0,0.05);
+}
+
+.packing-category-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #e68a2e;
+    border-bottom: 2px solid #f0e3d4;
+    padding-bottom: 10px;
+}
+
+.packing-category ul {
+    list-style: none;
+}
+
+.packing-category ul li {
+    padding: 10px 0;
+    color: #4a3a2a;
+    border-bottom: 1px solid #f7efe6;
+    font-size: 0.95rem;
+}
+
+.packing-category ul li:last-child {
+    border-bottom: none;
+}
+
+.camping-guide {
+    background: #fefaf5;
+}
+
+.camping-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.camping-card {
+    background: white;
+    border-radius: 32px;
+    padding: 32px;
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid #f0e3d4;
+}
+
+.camping-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+}
+
+.camping-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.camping-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.camping-card p {
+    color: #6b5745;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.camping-price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #e68a2e;
+}
+
+.camping-tip {
+    background: #e8f0fe;
+    border-radius: 24px;
+    padding: 20px 28px;
+    border-left: 5px solid #e68a2e;
+    font-size: 1rem;
+    color: #2d4a6e;
+}
+
+.transport {
+    background: #fff;
+}
+
+.transport-block {
+    background: linear-gradient(110deg, #1e2a3a 0%, #2d3a46 100%);
+    border-radius: 64px;
+    padding: 56px 48px;
+    color: #fff;
+}
+
+.transport-block h2 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.transport-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.transport-item {
+    text-align: center;
+}
+
+.transport-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.transport-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.transport-item p {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+.survival-tips {
+    background: #fef6ed;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 28px;
+    padding: 28px;
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid #f0e3d4;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -10px rgba(0,0,0,0.08);
+}
+
+.tip-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.tip-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #e68a2e;
+}
+
+.tip-card p {
+    font-size: 0.9rem;
+    color: #6b5745;
+    line-height: 1.4;
+}
+
+.faq-guide {
+    background: #fff;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.faq-item {
+    background: #fef9f0;
+    border-radius: 24px;
+    padding: 24px;
+    transition: all 0.2s;
+    border: 1px solid #f0e3d4;
+}
+
+.faq-item:hover {
+    background: #fff4e6;
+    border-color: #e68a2e;
+}
+
+.faq-q {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #e68a2e;
+}
+
+.faq-a {
+    color: #5a4a3a;
+    line-height: 1.5;
+}
+
+.final-motivation {
+    background: linear-gradient(145deg, #fff4e6 0%, #fae8d8 100%);
+    border-bottom: none;
+}
+
+.motivation-block {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.motivation-quote {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2d2a26;
+}
+
+.motivation-text {
+    font-size: 1.2rem;
+    color: #6b5745;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer {
+    background: #1f1b17;
+    color: #ccc3ba;
+    padding: 48px 0 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 28px;
+}
+
+.footer-links a {
+    color: #dcae86;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #fff0e0;
+}
+
+@media (max-width: 1100px) {
+    .tickets-grid,
+    .packing-grid,
+    .camping-grid,
+    .transport-grid,
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        padding: 0 24px;
+    }
+
+    .guide-intro-block h2 {
+        font-size: 1.6rem;
+    }
+
+    .guide-intro-block p {
+        font-size: 1rem;
+    }
+
+    .transport-block {
+        padding: 40px 30px;
+    }
+
+    .transport-block h2 {
+        font-size: 1.6rem;
+    }
+
+    .motivation-quote {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tickets-grid,
+    .packing-grid,
+    .camping-grid,
+    .transport-grid,
+    .tips-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        padding: 50px 0 30px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 32px;
+    }
+
+    .guide-intro-block {
+        padding: 40px 24px;
+    }
+
+    .guide-intro-block h2 {
+        font-size: 1.4rem;
+    }
+
+    .ticket-card {
+        padding: 24px 20px;
+    }
+
+    .packing-category {
+        padding: 22px;
+    }
+
+    .camping-card {
+        padding: 24px;
+    }
+
+    .transport-block {
+        padding: 30px 20px;
+    }
+
+    .transport-grid {
+        gap: 20px;
+    }
+
+    .tip-card {
+        padding: 20px;
+    }
+
+    .faq-item {
+        padding: 18px;
+    }
+
+    .motivation-quote {
+        font-size: 1.2rem;
+    }
+
+    .motivation-text {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .ticket-type {
+        font-size: 1.1rem;
+    }
+
+    .ticket-price {
+        font-size: 1.2rem;
+    }
+
+    .packing-category-title {
+        font-size: 1.1rem;
+    }
+
+    .camping-title {
+        font-size: 1.2rem;
+    }
+
+    .transport-item h3 {
+        font-size: 1rem;
+    }
+}
